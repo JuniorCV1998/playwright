@@ -8,8 +8,8 @@ export class LoginPage{
     private readonly imgFacebook: Locator
 
     constructor(page: Page){
-        this.userNameTextbox = page.locator('#email')
-        this.passwordTextBox = page.locator('#pass')
+        this.userNameTextbox = page.locator('input[name="email"]')
+        this.passwordTextBox = page.locator('input[name="pass"]')
         this.loginButton = page.locator('button[name="login"]')
         this.imgFacebook = page.getByRole('img', {name: 'Facebook'})
     }
@@ -33,10 +33,10 @@ export class LoginPage{
     async fullLoginCredentials(username: string, password: string){
         this.waitImgFacebook()
         await this.fillUserName(username)
-        const userName = await this.userNameTextbox.textContent()
+        const userName = await this.userNameTextbox.inputValue()
         console.log("El correo es: " + userName)
         await this.fillPassword(password)
-        const contra = await this.passwordTextBox.textContent()
+        const contra = await this.passwordTextBox.inputValue()
         console.log("La contra es: " + contra)
         await this.clicOnLogin()
     }

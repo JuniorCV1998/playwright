@@ -46,9 +46,9 @@ import { Util } from './pageObject/Util/util';
     postPage.selectNotification(4) //seleccionar notificacion
 
     // CLIC ME GUSTA
-    postPage.clickMeGustaPost() 
+    //postPage.clickMeGustaPost() 
     //await util.screenshot('like')
 
 
-    await page.pause();
+    //await page.pause();
   })

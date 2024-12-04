@@ -50,5 +50,5 @@ import { Util } from './pageObject/Util/util';
     //await util.screenshot('like')
 
 
-    await page.pause();
+    //await page.pause();
   })

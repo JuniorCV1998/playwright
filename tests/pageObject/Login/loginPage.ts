@@ -33,7 +33,11 @@ export class LoginPage{
     async fullLoginCredentials(username: string, password: string){
         this.waitImgFacebook()
         await this.fillUserName(username)
+        const userName = await this.userNameTextbox.textContent()
+        console.log("El correo es: " + userName)
         await this.fillPassword(password)
+        const contra = await this.passwordTextBox.textContent()
+        console.log("La contra es: " + contra)
         await this.clicOnLogin()
     }
 }

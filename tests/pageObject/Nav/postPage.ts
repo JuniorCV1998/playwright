@@ -12,6 +12,7 @@ export class PostPage{
     }
 
     async selectNotification(nro: number){
+        //await this.listNotification.waitFor({ state: 'visible', timeout: 5000 });
         const list = this.listNotification
         await list.nth(nro).click()
     }

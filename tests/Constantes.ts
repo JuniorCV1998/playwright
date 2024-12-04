@@ -3,5 +3,5 @@ export const Constantes = {
     PASS_USER: 'nuevavida2025', //54321j //nuevavida2025
     MSG_PASS_INCORRECT: "The password you’ve entered is incorrect.",
 
-    MSG_USER_WELCOME: "Jose Octavio, te damos la bienvenida a Facebook.",
+    MSG_USER_WELCOME: "Qué estás pensando",
 }

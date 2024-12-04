@@ -7,7 +7,8 @@ export class DashboardPage{
     private readonly btnMoreNotification: Locator
 
     constructor(page: Page){
-        this.txtWelcome = page.locator('//span[contains(text(),"la bienvenida a Facebook")]')
+        //this.txtWelcome = page.locator('//span[contains(text(),"la bienvenida a Facebook")]')
+        this.txtWelcome = page.locator('//span[contains(text(),"Qué estás pensando")]') 
         this.btnNotification = page.getByRole('link', {name: 'Notificaciones'})
         this.btnMoreNotification = page.locator('//span[contains(text(),"Ver notificaciones anteriores")]')
     }
@@ -16,7 +17,7 @@ export class DashboardPage{
     async assertTxtWelcomeUser(){
         //expect(this.txtWelcome).toBeVisible()
         const txtObtenido = await this.txtWelcome.textContent()
-        expect(txtObtenido).toBe(Constantes.MSG_USER_WELCOME)
+        expect(txtObtenido).toContain(Constantes.MSG_USER_WELCOME)
     }
 
     async clickbtnNotification(){

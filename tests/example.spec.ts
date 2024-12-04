@@ -30,7 +30,7 @@ import { Util } from './pageObject/Util/util';
 
     // DASHBOARD
     const dashboard = new DashboardPage(page)
-    //dashboard.assertTxtWelcomeUser()
+    dashboard.assertTxtWelcomeUser()
 
 
     //NOTIFICACIONES
@@ -50,5 +50,5 @@ import { Util } from './pageObject/Util/util';
     //await util.screenshot('like')
 
 
-    //await page.pause();
+    await page.pause();
   })

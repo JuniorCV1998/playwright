@@ -27,11 +27,11 @@ export class LoginPage{
     }
 
     async waitImgFacebook(){
-        await expect(this.imgFacebook).toBeVisible()
+        expect(this.imgFacebook).toBeVisible()
     }
 
     async fullLoginCredentials(username: string, password: string){
-        await this.waitImgFacebook()
+        this.waitImgFacebook()
         await this.fillUserName(username)
         await this.fillPassword(password)
         await this.clicOnLogin()

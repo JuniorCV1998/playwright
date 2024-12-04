@@ -25,7 +25,7 @@ import { Util } from './pageObject/Util/util';
 
     //login exitoso
     await loginPage.fullLoginCredentials(Constantes.EMAIL_USER,Constantes.PASS_USER)
-    //await util.screenshot('login')
+    await util.screenshot('login')
 
 
     // DASHBOARD
